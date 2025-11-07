@@ -1,12 +1,12 @@
 # BASED-FRANCE
 
-# Base Balance Checker 🟦
+# BASED-FRANCE — Balance Checker 🟦
 
-Petit script permettant de vérifier le solde ETH d'une adresse sur la blockchain **Base**.
+Petit script permettant de vérifier le solde ETH d’une adresse sur la blockchain **Base**.
 
 ## Installation
 
 ```bash
-git clone https://github.com/<TON-USERNAME>/base-balance-checker
-cd base-balance-checker
+git clone https://github.com/Berbere2Gaule/BASED-FRANCE
+cd BASED-FRANCE
 npm install

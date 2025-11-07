@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>BASED-FRANCE Checker</title>
+</head>
+<body>
+  <h1>BASED-FRANCE 🟦</h1>
+  <p>Vérifie le solde d'une adresse sur Base</p>
+
+  <input id="address" placeholder="Adresse ETH" />
+  <button id="check">Vérifier</button>
+
+  <pre id="result"></pre>
+
+  <script type="module">
+    import { createPublicClient, http } from "https://esm.sh/viem";
+    import { base } from "https://esm.sh/viem/chains";
+
+    const client = createPublicClient({ chain: base, transport: http() });
+
+    document.getElementById("check").onclick = async () => {
+      const address = document.getElementById("address").value;
+      const balance = await client.getBalance({ address });
+      document.getElementById("result").textContent =
+        `${balance / 10n ** 18n} ETH 🟦`;
+    };
+  </script>
+</body>
+</html>
